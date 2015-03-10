@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Course Reserves</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @course_reserves.each do |course_reserf| %>
+      <tr>
+        <td><%= link_to 'Show', course_reserf %></td>
+        <td><%= link_to 'Edit', edit_course_reserf_path(course_reserf) %></td>
+        <td><%= link_to 'Destroy', course_reserf, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Course reserve', new_course_reserf_path %>
